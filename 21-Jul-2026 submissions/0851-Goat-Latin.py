@@ -5,9 +5,9 @@
 # Tags      : String
 #
 # Runtime   : 0 ms
-# Memory    : 19.2 MB
+# Memory    : 19.3 MB
 # Language  : Python3
-# Submitted : 2026-07-21T18:07:46.558Z
+# Submitted : 2026-07-21T18:09:25.478Z
 #
 # Examples
 # ────────
@@ -35,35 +35,45 @@
 #
 # ────────────────────────────────────────────────────────────
 
+# class Solution:
+#     def toGoatLatin(self, sentence: str) -> str:
+#         #rules
+#         # 1. Split the string
+#         # 2. check each word with what char it starts
+#         # 3. Apply conditions
+#         # 4. join it
+
+#         s = sentence.split()
+#         vowels = "aeiouAEIOU"
+#         cnt = 1
+#         ans = ""
+#         for ch in s:
+#             if ch[0] in vowels:
+#                 ch = ch + 'ma'
+#                 i = 0
+#                 while i < cnt:
+#                     ch = ch + 'a'
+#                     i += 1
+#                 cnt +=1
+#                 ans = ans + ' ' + ch
+#             else:
+#                 ch = ch[1:] + ch[0] + 'ma'
+#                 i = 0
+#                 while i < cnt:
+#                     ch = ch + 'a'
+#                     i += 1
+#                 cnt +=1
+#                 ans = ans + ' ' + ch
+
+#         return ans.strip()
 class Solution:
     def toGoatLatin(self, sentence: str) -> str:
-        #rules
-        # 1. Split the string
-        # 2. check each word with what char it starts
-        # 3. Apply conditions
-        # 4. join it
-
-        s = sentence.split()
         vowels = "aeiouAEIOU"
-        cnt = 1
-        ans = ""
-        for ch in s:
-            if ch[0] in vowels:
-                ch = ch + 'ma'
-                i = 0
-                while i < cnt:
-                    ch = ch + 'a'
-                    i += 1
-                cnt +=1
-                ans = ans + ' ' + ch
-            else:
-                ch = ch[1:] + ch[0] + 'ma'
-                i = 0
-                while i < cnt:
-                    ch = ch + 'a'
-                    i += 1
-                cnt +=1
-                ans = ans + ' ' + ch
+        ans = []
 
-        return ans.strip()
-            
+        for i, word in enumerate(sentence.split(), 1):
+            if word[0] in vowels:
+                ans.append(word + "ma" + "a" * i)
+            else:
+                ans.append(word[1:] + word[0] + "ma" + "a" * i)
+        return " ".join(ans)            
