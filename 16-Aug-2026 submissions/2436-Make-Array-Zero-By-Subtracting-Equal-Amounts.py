@@ -4,10 +4,10 @@
 # Difficulty: Easy
 # Tags      : Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Simulation
 #
-# Runtime   : 8 ms
+# Runtime   : 0 ms
 # Memory    : 19.3 MB
 # Language  : Python3
-# Submitted : 2026-08-16T17:01:44.367Z
+# Submitted : 2026-08-16T17:02:33.715Z
 #
 # Examples
 # ────────
@@ -38,16 +38,4 @@
 
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
-        for i in range(len(nums)):
-            positive = [x for x in nums if x > 0]
-
-            if not positive:
-                return i
-
-            mini = min(positive)
-
-            for j in range(len(nums)):
-                if nums[j] > 0:
-                    nums[j] -= mini
-
-        return len(nums)
+        return len(set([i for i in nums if i]))
