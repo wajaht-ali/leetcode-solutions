@@ -5,9 +5,9 @@
 # Tags      : Array, Hash Table
 #
 # Runtime   : 0 ms
-# Memory    : 19.3 MB
+# Memory    : 19.2 MB
 # Language  : Python3
-# Submitted : 2026-08-26T09:07:05.882Z
+# Submitted : 2026-08-26T09:08:26.424Z
 #
 # Examples
 # ────────
@@ -45,17 +45,7 @@
 
 class Solution:
     def missingMultiple(self, nums: List[int], k: int) -> int:
-        arr = sorted(nums)
-        
-        curr = []
-        for num in arr:
-            if num < k:
-                continue
-            else:
-                if num % k == 0:
-                    curr.append(num)
-        
-        for i in range(1, 501):
-            if i % k == 0 and i not in curr:
-                return i
-            
+        i=1
+        while k*i in nums:
+            i+=1
+        return k*i 
