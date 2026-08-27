@@ -2,8 +2,8 @@
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=for-the-badge&logo=leetcode)
 ![Language](https://img.shields.io/badge/Language-Python3-3776AB?style=for-the-badge&logo=python)
-![Runtime](https://img.shields.io/badge/Runtime-1754_ms-blue?style=for-the-badge)
-![Memory](https://img.shields.io/badge/Memory-19.7_MB-purple?style=for-the-badge)
+![Runtime](https://img.shields.io/badge/Runtime-1712_ms-blue?style=for-the-badge)
+![Memory](https://img.shields.io/badge/Memory-20_MB-purple?style=for-the-badge)
 ---
 
 ## 📋 Problem Description
@@ -63,9 +63,9 @@ You can return the answer in any order.
 | Metric | Value |
 |:-------|:------|
 | **Language** | Python3 |
-| **Runtime** | 1754 ms |
-| **Memory** | 19.7 MB |
-| **Submitted** | 2026-08-27T15:18:49.310Z |
+| **Runtime** | 1712 ms |
+| **Memory** | 20 MB |
+| **Submitted** | 2026-08-27T15:25:33.883Z |
 
 ```python
 class Solution:
