@@ -2,7 +2,7 @@
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge&logo=leetcode)
 ![Language](https://img.shields.io/badge/Language-Python3-3776AB?style=for-the-badge&logo=python)
-![Runtime](https://img.shields.io/badge/Runtime-31_ms-blue?style=for-the-badge)
+![Runtime](https://img.shields.io/badge/Runtime-18_ms-blue?style=for-the-badge)
 ![Memory](https://img.shields.io/badge/Memory-34_MB-purple?style=for-the-badge)
 ---
 
@@ -73,43 +73,25 @@ Return *the **minimum** number of deletions it would take to remove **both** the
 | Metric | Value |
 |:-------|:------|
 | **Language** | Python3 |
-| **Runtime** | 31 ms |
+| **Runtime** | 18 ms |
 | **Memory** | 34 MB |
-| **Submitted** | 2026-08-31T09:41:33.381Z |
+| **Submitted** | 2026-08-31T09:42:32.264Z |
 
 ```python
 class Solution:
     def minimumDeletions(self, nums: List[int]) -> int:
         n = len(nums)
 
-        mini = nums[0]
-        maxi = nums[0]
-        min_idx = 0
-        max_idx = 0
-
-        for k in range(n):
-            if nums[k] < mini:
-                mini = nums[k]
-                min_idx = k
-
-            if nums[k] > maxi:
-                maxi = nums[k]
-                max_idx = k
+        min_idx = nums.index(min(nums))
+        max_idx = nums.index(max(nums))
 
         left = min(min_idx, max_idx)
         right = max(min_idx, max_idx)
 
-        both_left = right + 1
-        both_right = n - left
-
-        min_left_max_right = left + 1 + n - right
-        max_left_min_right = right + 1 + n - left
-
         return min(
-            both_left,
-            both_right,
-            min_left_max_right,
-            max_left_min_right
+            right + 1,
+            n - left,
+            left + 1 + n - right
         )
 ```
 
