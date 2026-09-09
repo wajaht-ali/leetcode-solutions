@@ -3,7 +3,7 @@
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=for-the-badge&logo=leetcode)
 ![Language](https://img.shields.io/badge/Language-Python3-3776AB?style=for-the-badge&logo=python)
 ![Runtime](https://img.shields.io/badge/Runtime-0_ms-blue?style=for-the-badge)
-![Memory](https://img.shields.io/badge/Memory-19.2_MB-purple?style=for-the-badge)
+![Memory](https://img.shields.io/badge/Memory-19.3_MB-purple?style=for-the-badge)
 ---
 
 ## 📋 Problem Description
@@ -58,8 +58,8 @@ In **standard** formatting:
 |:-------|:------|
 | **Language** | Python3 |
 | **Runtime** | 0 ms |
-| **Memory** | 19.2 MB |
-| **Submitted** | 2026-09-09T08:17:36.743Z |
+| **Memory** | 19.3 MB |
+| **Submitted** | 2026-09-09T08:18:29.957Z |
 
 ```python
 class Solution:
